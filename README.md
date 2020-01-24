@@ -1,6 +1,6 @@
 # tempMail
 
-[![Build Status](https://travis-ci.org/subtosilencio/git-lint-validators.svg?branch=master)](https://travis-ci.org/subtosilencio/git-lint-validators)
+[![Build Status](https://travis-ci.org/subtosilencio/tempMail.svg?branch=master)](https://travis-ci.org/subtosilencio/tempMail)
 
 Get domains used for disposable emails.
 
