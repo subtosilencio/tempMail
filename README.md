@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/subtosilencio/tempMail.svg?branch=master)](https://travis-ci.org/subtosilencio/tempMail)
 ![Python application](https://github.com/subtosilencio/tempMail/workflows/Python%20application/badge.svg)
+
 Get domains used for disposable emails.
 
 ```
