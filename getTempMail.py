@@ -32,20 +32,31 @@ def main():
     domains = api.get_mail_list() # get the list of domains
     api.close() # close webdriver
 
-    with open(fileName, 'r') as f:
-        for line in f:
-            domainsFile.append(line.rstrip())
-        f.close()
+    if len(domains) == 0:
+        print('Total of Zero domains were colected!')
+    else:
 
-    for domain in domains:
-        domain = domain.replace('@','')
-        if domain not in domainsFile:
-            domainsFile.append(domain)
+        with open(fileName, 'r') as f:
+            for line in f:
+                domainsFile.append(line.rstrip())
+            f.close()
 
-    with open(fileName, 'w') as f:
-        for domain in sorted(domainsFile):
-            f.write(domain+'\n')
-        f.close()
+        l = len(domainsFile)
+
+        for domain in domains:
+            domain = domain.replace('@','')
+            if domain not in domainsFile:
+                domainsFile.append(domain)
+        
+       
+        with open(fileName, 'w') as f:
+            for domain in sorted(domainsFile):
+                f.write(domain+'\n')
+            f.close()
+        if len(domainsFile) == l:
+            print('There was no new domains')
+        else:
+            print('New emails saved in', fileName)
     
     
 ###############################################################################
